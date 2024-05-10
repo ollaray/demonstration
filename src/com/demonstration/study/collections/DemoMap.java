@@ -1,6 +1,7 @@
 package com.demonstration.study.collections;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
@@ -93,4 +94,51 @@ public class DemoMap {
 	
 	}
 	
+	//Looping True a Map
+	//Simply put, we can extract the contents of a Map using entrySet(), keySet(), or values(). 
+	//Since these are all sets, similar iteration principles apply to all of them.
+	
+	public static void firstMapLoop() {
+		HashMap<String, Integer> hashMap = new HashMap<>();
+		hashMap.put("A", 5);
+		hashMap.put("Z", 15);
+		hashMap.put("F", 25);
+		hashMap.put("L", 250);
+		hashMap.put("B", 35);
+		hashMap.put("G", 100);
+		Iterator<Map.Entry<String, Integer>> itr = hashMap.entrySet().iterator();
+		while(itr.hasNext()) {
+			Map.Entry<String, Integer> entry = itr.next();
+			System.out.println("Key = "+entry.getKey()+ " Value "+entry.getValue());
+		}
+	}
+	
+	//looping using foreach 
+	public static void secondMapLoop() {
+		HashMap<String, Integer> hashMap = new HashMap<>();
+		hashMap.put("A", 5);
+		hashMap.put("Z", 15);
+		hashMap.put("F", 25);
+		hashMap.put("L", 250);
+		hashMap.put("B", 35);
+		hashMap.put("G", 100);
+		for(Map.Entry<String, Integer> entry: hashMap.entrySet()) {
+			System.out.println("Key = "+entry.getKey()+" Value = "+entry.getValue());
+		}
+	}
+	
+	public static void thirdMapLoop() {
+		HashMap<String, Integer> hashMap = new HashMap<>();
+		hashMap.put("A", 5);
+		hashMap.put("Z", 15);
+		hashMap.put("F", 25);
+		hashMap.put("L", 250);
+		hashMap.put("B", 35);
+		hashMap.put("G", 100);
+		for(String key: hashMap.keySet()) {
+			System.out.println("Key = "+key+" Value = "+hashMap.get(key));
+		}
+	}
+	
+
 }

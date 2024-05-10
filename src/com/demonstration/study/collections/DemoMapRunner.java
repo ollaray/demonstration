@@ -9,9 +9,7 @@ public class DemoMapRunner {
 		//DemoMap.basicMapOps();
 		//DemoMap.hashMapOperation();
 		//DemoMap.linkedHashMapOps();
-		DemoMap.treeMapCollection();
-		
-		
+		//DemoMap.treeMapCollection();
 		
 	}
 
