@@ -1,0 +1,11 @@
+static  Predicate isEqual(Object targetRef)
+Returns a predicate that tests if two arguments are 
+equal according to Objects.equals(Object, Object).
+T : the type of arguments to the predicate
+Parameters:
+targetRef : the object reference with which to 
+compare for equality, which may be null
+Returns: a predicate that tests if two arguments 
+are equal according to Objects.equals(Object, Object)
+The lambda expression assigned to an object of Supplier type is used to define its get() which eventually produces a value. 
+Suppliers are useful when we don’t need to supply any value and obtain a result at the same time.
